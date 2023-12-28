@@ -1,5 +1,6 @@
 package com.movies.imdb.service;
 
+import com.movies.imdb.XmlFile.Cinema;
 import com.movies.imdb.model.Movies;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +55,26 @@ public class ImdbService {
                     e
             );
         }
+    }
+
+    public Cinema getOutputFile(Cinema cinema) {
+
+        Cinema opFile = new Cinema();
+        try {
+            System.out.println("inside opfile");
+            //System.out.println("Hero: " + cinema.getMovie().getHero());
+            //opFile.getMovie().setHero("Mohanlal");
+            //System.out.println("Hero hardcoded: " + opFile.getMovie().getHero());
+//            opFile.getMovie().setHero(cinema.getMovie().getHero());
+//            opFile.getMovie().setName(cinema.getMovie().getName());
+//            opFile.getMovie().setBudget(cinema.getMovie().getBudget());
+            //System.out.println("Name from opfile: " + opFile.getMovie().getName());
+
+        }catch (Exception e){
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+        return opFile;
+
     }
 }

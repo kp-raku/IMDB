@@ -158,3 +158,38 @@ Response sample:
         ]
     }
 }
+
+**New Endpoint for Xml o/p**
+
+New endpoint /get-file has been added. Pass a request as given below and it will return corresponding XML response
+Request:
+{
+"movies": [
+{
+"name": "Avengers",
+"budget": 100,
+"hero": "Robert"
+},
+{
+"name": "Infinity War",
+"budget": 200,
+"hero": "John"
+}
+]
+}
+
+Response:
+<Cinema>
+<movies>
+<movies>
+<name>Avengers</name>
+<budget>100</budget>
+<hero>Robert</hero>
+</movies>
+<movies>
+<name>Infinity War</name>
+<budget>200</budget>
+<hero>John</hero>
+</movies>
+</movies>
+</Cinema>
